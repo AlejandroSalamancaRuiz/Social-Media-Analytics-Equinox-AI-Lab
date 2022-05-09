@@ -47,4 +47,15 @@ To start the application, follow these steps:
 5. Be sure that the endpoint of the REST services is http://127.0.0.1:5000/
 6. Open another terminal, go to the Front folder and start the frontend with the instruction: streamlit run Dashboard.py
 7. The Dashboard should deploy in the localhost port 8501
+8. (Erase database) run command cypher-shell. Then run match (p:Person),(p1:Post) detach delete p,p1;
+
+
+## Images of application running
+
+![1](1.png "1")
+![2](2.png "2")
+![3](3.png "3")
+![4](4.png "4")
+![5](5.png "5")
+![6](6.png "6")
 
