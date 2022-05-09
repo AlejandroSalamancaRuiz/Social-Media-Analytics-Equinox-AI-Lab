@@ -29,9 +29,22 @@ In the config file is the URL to connect to the Cosmos DB.
 
 For this application to work, some assumptions need to be considered.
 
-All the packages in the requirements.txt file need to be installed.
-Although the application was built to decouple the frontend and backend, the current implementation is built to run locally.
-Neo4j is already installed, and the default database 'neo4j' will be used to create the graph and make the queries.
-The connection to the Neo4j database needs to be changed in the config file for the application to work.
-For streamlit to work correctly, run the command pip install -U click==8
+- All the packages in the requirements.txt file need to be installed.
+- Although the application was built to decouple the frontend and backend, the current implementation is built to run locally.
+- Neo4j is already installed, and the default database 'neo4j' will be used to create the graph and make the queries.
+- The connection to the Neo4j database needs to be changed in the config file for the application to work.
+- For streamlit to work correctly, run the command pip install -U click==8
+- The application is meant to be deployed once, meaning that it will build the graph database every time it starts again. If the database has previous information, the application will crash. To avoid this, after finishing testing the app, erase all info in the database with the following command in the cypher-shell: match (p:Person),(p1:Post) detach delete p,p1;
+
+## Execute the application
+
+To start the application, follow these steps:
+
+1. Install Neo4j: https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-neo4j-on-ubuntu-20-04
+2. In the same machine, install all requirements for the backend to work (Back/requirements.txt).
+3. In the same machine, install all requirements for the frontend to work (Front/requirements.txt)
+4. Open a terminal, go to the Back folder and start the backend with the instruction: FLASK_APP=App.py flask run
+5. Be sure that the endpoint of the REST services is http://127.0.0.1:5000/
+6. Open another terminal, go to the Front folder and start the frontend with the instruction: streamlit run Dashboard.py
+7. The Dashboard should deploy in the localhost port 8501
 
