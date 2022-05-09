@@ -6,6 +6,8 @@ The project is intended as a tool for social media analytics. It focuses on anal
 
 The tool's objective is to answer some relevant questions about the network of followers and content published by the company.
 
+The questions are answered by exploiting a modeled graph where there are two types of nodes, the nodes that represent followers and the nodes that represent content (posts). The connection between the nodes is given by the reactions of followers to posts. This way, we can answer some interesting questions about the network.
+
 ## Architecture
 
 The application's architecture is thought so the backend and frontend can be decoupled and deployed in different containers or VMs. 
