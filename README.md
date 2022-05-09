@@ -25,3 +25,13 @@ The frontend is responsible for:
 
 In the config file is the URL to connect to the Cosmos DB.
 
+## Assumptions and restrictions
+
+For this application to work, some assumptions need to be considered.
+
+All the packages in the requirements.txt file need to be installed.
+Although the application was built to decouple the frontend and backend, the current implementation is built to run locally.
+Neo4j is already installed, and the default database 'neo4j' will be used to create the graph and make the queries.
+The connection to the Neo4j database needs to be changed in the config file for the application to work.
+For streamlit to work correctly, run the command pip install -U click==8
+
