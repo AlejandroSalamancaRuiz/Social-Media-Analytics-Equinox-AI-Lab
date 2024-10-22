@@ -1,4 +1,4 @@
-# Project - Alejandro Salamanca
+# LinkedIn Analytics using graphs
 
 The project is intended as a tool for social media analytics. It focuses on analyzing LinkedIn posts and followers of the company Equinox AI & Data Lab https://www.linkedin.com/company/equinox-ai-lab. 
 
